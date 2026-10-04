@@ -1,0 +1,3 @@
+]633;E;echo "Annotations en 2016 : $(cat *2016*.ann | wc -l)";ef3455de-cf55-4766-8e5e-a75ff18159bd]633;CAnnotations en 2016 : 9443
+Annotations en 2017 : 7183
+Annotations en 2018 : 7565

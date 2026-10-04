@@ -1,0 +1,14 @@
+
+ {
+  echo "Annotations en 2016 : $(cat *2016*.ann | wc -l)"
+  echo "Annotations en 2017 : $(cat *2017*.ann | wc -l)"
+  echo "Annotations en 2018 : $(cat *2018*.ann | wc -l)"
+ }> Exercices/comptes.txt
+{
+  echo "Annotations en 2016 : $(cat *2016*.ann | grep -c 'Location')"
+  echo "Annotations en 2017 : $(cat *2017*.ann | grep -c 'Location')"
+  echo "Annotations en 2018 : $(cat *2018*.ann | grep -c 'Location')"
+} > Exercices/locations.txt
+cat *2016*.ann | grep 'Location' | cut -f3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2016.txt
+cat *2017*.ann | grep 'Location' | cut -f3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2017.txt
+cat *2018*.ann | grep 'Location' | cut -f3 | sort | uniq -c | sort -n | tail -15 > Exercices/classement_2018.txt
